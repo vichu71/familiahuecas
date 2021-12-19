@@ -1,0 +1,17 @@
+    <?php  
+ $host_name = 'db5002263053.hosting-data.io';
+  $database = 'dbs1823997';
+  $user_name = 'dbu177785';
+  $password = 'I0n0s#0.1';
+
+  $link = new mysqli($host_name, $user_name, $password, $database);
+
+  if ($link->connect_error) {
+    
+    die('<p>Error al conectar con servidor MySQL: '. $link->connect_error .'</p>');
+   echo '<script language="javascript">alert("Error al conectar con servidor MySQL");</script>';
+  } else {
+    echo '<p>Se ha establecido la conexión al servidor MySQL con éxito.</p>';
+     echo '<script language="javascript">alert("Se ha establecido la conexión al servidor MySQL con éxito");</script>';
+  }     
+?>
